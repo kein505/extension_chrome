@@ -1,0 +1,40 @@
+{
+  "name": "Getting Started Physical Jerks",
+  "version": "1.0",
+  "description": "an application that will make you get up from the table and do exercises!",
+  "permissions": [],
+ // "options_page": "options.html",
+  "background": {
+	//"matches": ["<all_urls>"],
+    "scripts": ["content_script/background.js"]
+	//"run_at":"document_end",
+   // "persistent": false
+  },
+
+ //  "content_scripts":[
+//	{
+//		"matches": ["<all_urls>"],
+//		"js": ["popup/popup.js"],
+//		"run_at":"document_end"
+//	}
+ // ],
+ 
+ 
+ 
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "images/FK_16.png",
+      "32": "images/FK_32.png",
+      "48": "images/FK_48.png",
+      "128": "images/FK_128.png"
+    }
+  },
+  "icons": {
+    "16": "images/FK_16.png",
+    "32": "images/FK_32.png",
+    "48": "images/FK_48.png",
+    "128": "images/FK_128.png"
+  },
+  "manifest_version": 2
+}
