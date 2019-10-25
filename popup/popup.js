@@ -14,7 +14,7 @@ setInterval(() => {
     chrome.runtime.sendMessage('get_time', time => {
         document.querySelector('#time').value = time;
     });
-},1);
+},100);
 
 /* let changeColor = document.getElementById('changeColor');
 

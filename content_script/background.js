@@ -10,7 +10,6 @@ chrome.runtime.onMessage.addListener((action, sender, sendResponse) => {
         case "start":
             isEnabled = true;
             lastDate = Date.now();
-			//datech = Date.now() - lastDate;
             break;
         case "stop":
             isEnabled = false;
@@ -21,16 +20,20 @@ chrome.runtime.onMessage.addListener((action, sender, sendResponse) => {
 			datech = Date.now() - lastDate;
             if(isEnabled) {
                 
-				if(datech==1000){
+				if(datech>950 && datech<1100)
+				{
 					alert("Сделай зарядку-v3");
-					}
-				sendResponse(datech);
+				}
+				//else 
+				//{
+					sendResponse(datech);
+				//}
+				
 				
             } 
 			else {
 				datech=null;
-                sendResponse(null);
-				
+                sendResponse(null);	
             }
             break;
         }

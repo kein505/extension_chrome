@@ -5,7 +5,7 @@
   "permissions": [],
  // "options_page": "options.html",
   "background": {
-	//"matches": ["<all_urls>"],
+	"matches": ["<all_urls>"],
     "scripts": ["content_script/background.js"]
 	//"run_at":"document_end",
    // "persistent": false
